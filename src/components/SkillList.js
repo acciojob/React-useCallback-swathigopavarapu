@@ -1,9 +1,8 @@
 import React from "react";
 
 const SkillList = React.memo(({ skills, onDelete }) => {
-    console.log('sdfs',skills, onDelete)
   return (
-    <ul>
+    <ul id="skill-list">
       {skills.map((skill, idx) => (
         <li
           key={idx}

@@ -12,10 +12,8 @@ const UseCallbackComp = () => {
     if (newSkill && !skills.includes(newSkill)) {
       setSkills((prevSkills) => [...prevSkills, newSkill]);
     }
-    setInput(""); // clear input after add
+    setInput("");
   }, [input, skills]);
-
-  // Delete skill handler
   const deleteSkill = useCallback((skill) => {
     setSkills((prevSkills) => prevSkills.filter((s) => s !== skill));
   }, []);
@@ -23,8 +21,6 @@ const UseCallbackComp = () => {
   return (
     <div>
       <h1 id="heading">Skill Manager with useCallback</h1>
-
-      
       <input
         id="skill-input"
         type="text"
